@@ -2,7 +2,7 @@
 
 A React + Django web app that helps a truck driver choose the safest route based on **weather along the way**, **load weight**, and **travel time**.
 
-> Live app: `<HOSTED_URL>` · Walkthrough: `<LOOM_URL>` · Repo: `<GITHUB_URL>`
+> Live app: [https://storm-route-rho.vercel.app/](https://storm-route-rho.vercel.app/) · Walkthrough: pending · Repo: [github.com/ammarahmad01/StormRoute](https://github.com/ammarahmad01/StormRoute)
 
 ## What it does
 
@@ -20,7 +20,7 @@ A React + Django web app that helps a truck driver choose the safest route based
 |---|---|---|
 | Frontend | React + Vite + TypeScript, Leaflet (react-leaflet), leaflet.heat | Fast dev, simple map, canvas heatmap |
 | Backend | Django + Django REST Framework | Required; clean API layer |
-| Routing / geocoding | Mapbox Directions + Geocoding (pluggable provider, OSRM fallback) | Returns alternatives; see `docs/ASSUMPTIONS.md` |
+| Routing / geocoding | Mapbox Directions + Geocoding (pluggable provider, OSRM fallback) | Returns alternatives; see [`docs/ASSUMPTIONS.md`](docs/ASSUMPTIONS.md) |
 | Weather | Open-Meteo (no key, hourly, mph + inch units, multi-location requests) | Free, batchable |
 | Cache | Django cache (LocMem locally, Redis in prod optional) | Avoid duplicate weather calls |
 | Tests | pytest + pytest-django, Vitest | Risk/ranking logic is the core of the grade |
@@ -45,7 +45,7 @@ weather-truck-routing/
 ├── frontend/
 │   └── src/
 │       ├── api/  components/  hooks/  map/  types/
-├── *.md                        # design and submission docs (kept at repository root)
+├── docs/                       # design, testing, deployment, and submission docs
 └── README.md
 ```
 
@@ -96,20 +96,27 @@ cd frontend && npm test
 - **Risk per checkpoint = worst of wind / rain / snow**, after load rules.
 - **Ranking is lexicographic**, not a weighted score (exactly as the brief specifies).
 - **"Miles" per risk level** = the road length each checkpoint represents.
-- Full list in [`ASSUMPTIONS.md`](ASSUMPTIONS.md).
+- Full list in [`docs/ASSUMPTIONS.md`](docs/ASSUMPTIONS.md).
 
 ## Documentation index
 
-- [Architecture](ARCHITECTURE.md)
-- [Risk rules & ranking](RISK_AND_RANKING.md)
-- [API reference](API.md)
-- [Assumptions & edge cases](ASSUMPTIONS.md)
-- [Testing strategy](TESTING.md)
-- [Deployment](DEPLOYMENT.md)
-- [Implementation plan](IMPLEMENTATION_PLAN.md)
-- [Loom script](LOOM_SCRIPT.md)
-- [Submission checklist](SUBMISSION_CHECKLIST.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Risk rules & ranking](docs/RISK_AND_RANKING.md)
+- [API reference](docs/API.md)
+- [Assumptions & edge cases](docs/ASSUMPTIONS.md)
+- [Testing strategy](docs/TESTING.md)
+- [Deployment](docs/DEPLOYMENT.md)
+- [Implementation plan](docs/IMPLEMENTATION_PLAN.md)
+- [Loom script](docs/LOOM_SCRIPT.md)
+- [Submission checklist](docs/SUBMISSION_CHECKLIST.md)
 
 ## Known limitations
 
-See the bottom of [`ASSUMPTIONS.md`](ASSUMPTIONS.md). Fill in honestly before submitting.
+See the bottom of [`docs/ASSUMPTIONS.md`](docs/ASSUMPTIONS.md). Fill in honestly before submitting.
+
+## Deployment
+
+- Frontend: [storm-route-rho.vercel.app](https://storm-route-rho.vercel.app/)
+- Backend health: [stormroute-6ted.onrender.com/api/health](https://stormroute-6ted.onrender.com/api/health)
+- Repository: [github.com/ammarahmad01/StormRoute](https://github.com/ammarahmad01/StormRoute)
+- Walkthrough: pending

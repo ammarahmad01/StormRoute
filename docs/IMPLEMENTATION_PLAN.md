@@ -43,8 +43,8 @@ Ordered to protect the 40% correctness section first, then the 40% UI/map sectio
 ## Phase 6: Docs, deploy, Loom (about 2-3 h)
 - [ ] Finish README, ASSUMPTIONS limitations.
 - [ ] Deploy backend + frontend; verify on hosted URL.
-- [ ] Rehearse and record Loom (see LOOM_SCRIPT.md).
-- [ ] Final run through SUBMISSION_CHECKLIST.md.
+- [ ] Rehearse and record the product walkthrough.
+- [ ] Complete the final submission review.
 
 ## Priorities if time is short
 

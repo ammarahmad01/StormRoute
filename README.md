@@ -107,8 +107,6 @@ cd frontend && npm test
 - [Testing strategy](docs/TESTING.md)
 - [Deployment](docs/DEPLOYMENT.md)
 - [Implementation plan](docs/IMPLEMENTATION_PLAN.md)
-- [Loom script](docs/LOOM_SCRIPT.md)
-- [Submission checklist](docs/SUBMISSION_CHECKLIST.md)
 
 ## Known limitations
 
